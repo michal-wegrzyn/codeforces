@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int a[200007];
 int cnt[200007];
 
 int main()
@@ -10,7 +9,8 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    int t, n, m, x, max_cnt, st, en, mid, balance;
+    int t, n, m, x, max_cnt, st, en, mid;
+    long long balance;
     cin >> t;
     while (t--)
     {
@@ -20,7 +20,6 @@ int main()
         for (int i = 1; i <= m; i++)
         {
             cin >> x;
-            a[i] = x;
             cnt[x]++;
         }
         max_cnt = *(max_element(cnt + 1, cnt + n + 1));
